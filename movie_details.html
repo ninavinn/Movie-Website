@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./movie_style.css" />
+    <title>Movie Details</title>
+  </head>
+  <body>
+    <img
+      id="backgroundposter"
+      class="backgroundimg"
+      src=""
+      alt="Movie Poster"
+    />
+    <div class="firstdiv">
+      <div class="maindiv">
+        <div class="content">
+          <a href="./index.html" class="contenta"><span> < </span>Back Home</a>
+          <h1 id="title" class="title"></h1>
+          <div id="starRating" class="stars"></div>
+          <img src="./images/imbd.png" alt="imbd" />
+          <p><strong>Released:</strong> <span id="year"></span></p>
+          <p><strong>Genre:</strong> <span id="genre"></span></p>
+
+          <p><strong>Plot:</strong> <span id="plot"></span></p>
+          <div class="Buttons">
+            <button type="button" class="Btn1">+ Watchlist</button>
+            <button type="button" class="Btn2">Watch Now</button>
+          </div>
+        </div>
+        <div class="imgdiv">
+          <p>Top rated</p>
+          <img id="poster" class="posterimg" src="" alt="Movie Poster" />
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

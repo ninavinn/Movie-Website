@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+footer {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  font-family: "Luckiest guy";
+  color: #f8b319;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 20px 0;
+}
+.myContainer {
+  display: grid !important;
+  grid-template-columns: 20% 72%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 !important;
+}
+
+/* navbar */
+.myNavBar {
+  max-width: 1200px;
+  width: 100%;
+}
+.myNavDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+#mode-icon {
+  border: none;
+}
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  transition: color 0.3s;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.NavUl li {
+  margin-right: 50px;
+  position: relative;
+}
+.NavUl li ::after {
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f8b319;
+  transform-origin: bottom left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+.NavUl li :hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+.burger-menu-line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+.menu.open {
+  display: block;
+  padding-right: 20px;
+  justify-content: flex-end;
+  align-items: end !important;
+  animation: slider 0.5s ease forwards;
+}
+.searchForm.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.myNavDiv.open {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(124, 118, 107, 0.8);
+}
+body.open {
+  filter: brightness(0.8);
+}
+
+@keyframes slider {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .NavUl li {
+    margin: 0;
+  }
+  .searchForm {
+    display: none;
+    float: none;
+    position: static;
+  }
+  .lightMode {
+    display: none;
+    float: none;
+    position: static;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .myNavDiv {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: end;
+  }
+  .navbar {
+    justify-content: flex-end;
+    align-items: end;
+    flex-direction: column;
+  }
+}
+
+.search-container {
+  border-radius: 10px;
+  width: 100%;
+}
+.mySearchButton {
+  border: none !important;
+  width: 60% !important;
+}
+.mySearchButton::placeholder {
+  color: #f9f9f9ab !important;
+}
+.inputSpan {
+  border: none !important;
+  color: #aeafb2 !important;
+}
+.input-group {
+  flex-wrap: nowrap !important;
+}
+
+.logoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoDiv img {
+  width: 60px;
+  height: auto;
+}
+.logoDiv h1 {
+  font-family: "Luckiest guy";
+  color: #f8b319;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.firstSectionDiv {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 73%;
+  grid-gap: 80px;
+  background-image: url(./images/firstsection.png);
+  background-repeat: no-repeat;
+}
+
+.sidebar {
+  padding: 0 20px;
+  width: 250px;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #f9f9f9;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #f9f9f9;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+}
+.active_a {
+  color: #f8b319 !important;
+}
+.active_li {
+  border-right: 1px solid #f8b319;
+}
+.main-content {
+  padding: 0 50px;
+}
+.myCarousel img {
+  max-height: 350px;
+  height: 50%;
+  object-fit: cover;
+  filter: brightness(70%);
+  width: 100% !important;
+  border-radius: 20px;
+}
+.carousel-item {
+  position: relative;
+}
+.carousel-item p {
+  position: absolute;
+  z-index: 5;
+  left: 5%;
+  top: 5%;
+  color: #f9f9f9;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 48px;
+  text-align: left;
+}
+.carouselBtn1 {
+  position: absolute;
+  left: -15%;
+  bottom: 10%;
+  border: none;
+  padding: 20px 25px;
+  border-radius: 15px;
+  background-color: rgb(75, 74, 74);
+  color: #f9f9f9;
+  font-weight: 800;
+  font-size: 18px;
+}
+.carouselBtn2 {
+  position: absolute;
+  right: -15%;
+  bottom: 10%;
+  background-color: #f8b319;
+  border: none;
+  padding: 20px 50px;
+  border-radius: 15px;
+  font-weight: 800;
+  font-size: 18px;
+}
+.carouselbtn {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(75, 74, 74);
+  color: #f9f9f9;
+  font-size: 12px;
+}
+.main-content h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #f9f9f9;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 30px;
+  text-align: left;
+}
+.cards {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+.card {
+  position: relative;
+  flex: 30%;
+  height: 300px;
+  border-radius: 20px !important;
+  border: none !important;
+}
+.card img {
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+.card h5 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: #f9f9f9;
+  font-size: 24px;
+  font-weight: 800;
+}
+.cardp1 {
+  position: absolute;
+  left: 5%;
+  bottom: 15%;
+  color: #f9f9f9b2;
+}
+.cardp2 {
+  position: absolute;
+  right: 5%;
+  bottom: 15%;
+  color: #f9f9f9b2;
+}
+.cardBtn1 {
+  position: absolute;
+  left: -15%;
+  bottom: -30%;
+  border: none;
+  padding: 2% 15%;
+  border-radius: 15px;
+  background-color: rgb(75, 74, 74);
+  color: #f9f9f9;
+  font-weight: 800;
+  font-size: 180%;
+}
+.cardBtn2 {
+  position: absolute;
+  right: -15%;
+  bottom: -30%;
+  background-color: #f8b319;
+  border: none;
+  padding: 8% 15%;
+  border-radius: 15px;
+  font-weight: 800;
+  font-size: 100%;
+}
+.starsDiv {
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card i {
+  color: #f8b319;
+}
+
+/* movie list */
+.movie-list {
+  position: absolute;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+.movie-item {
+  width: 315px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.movie-img {
+  padding-left: 20px;
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.movie-title {
+  color: #f9f9f9;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  z-index: 1;
+}
+
+/* top rated movies */
+.secondSectionDiv {
+  margin-top: 50px;
+  max-width: 1200px;
+  width: 100%;
+}
+.secondSectionTitle {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  color: #f9f9f9;
+  font-size: 48px;
+  font-weight: 800;
+}
+.movie-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.movie-card {
+  position: relative;
+  margin-bottom: 2%;
+  width: 23%;
+}
+.movie-card img {
+  width: 100%;
+  height: 60%;
+  border-radius: 8% 8% 0 0;
+}
+.movie-card h4 {
+  font-size: 24px;
+  color: #f9f9f9;
+}
+.movie-cardp {
+  font-size: 14px;
+  color: #f9f9f9;
+}
+.rating {
+  color: #f8b319;
+  font-size: 20px;
+}
+.imdbRating {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2% 5%;
+  background-color: #f8b319;
+  border-radius: 0 30%;
+}
+#loadMoreBtn {
+  margin: 20px 0 50px 0;
+  display: flex;
+  justify-content: center;
+}
+.contenta {
+  padding-top: 50px;
+  text-decoration: none;
+  color: #f9f9f9;
+}
+.contenta span {
+  background-color: rgb(75, 74, 74);
+  padding: 1% 1.5%;
+  border-radius: 30%;
+  margin-right: 1%;
+}
+
+/* lightMode */
+.lightBackground {
+  background-color: white;
+}
+.lightImg {
+  background-image: url(./images/image.png);
+}
+.blackText {
+  color: black !important;
+  font-weight: 600 !important;
+}
+.darkCard {
+  background-color: rgb(250, 242, 233);
+  border-radius: 20px;
+  padding: 10px;
+}
+.blackBurgerMenu {
+  background-color: black;
+}
